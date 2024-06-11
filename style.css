@@ -7,3 +7,12 @@ Author URI: https://votresite.com
 Template: twentytwenty
 */
 @import url("../twentytwenty/style.css");
+
+@font-face {
+    font-family:"space-mono" ;
+    src: url("./assets/fonts/Space_Mono/SpaceMono-BoldItalic.ttf") format("truetype");
+}
+
+.site-title {
+    font-family: "space-mono";
+}
