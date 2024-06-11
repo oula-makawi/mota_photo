@@ -1,0 +1,9 @@
+/*
+Theme Name: Twenty Twenty Child
+Theme URI: https://example.com
+Description: Un thème enfant de Twenty Twenty pour WordPress.
+Author: Votre nom
+Author URI: https://votresite.com
+Template: twentytwenty
+*/
+@import url("../twentytwenty/style.css");
