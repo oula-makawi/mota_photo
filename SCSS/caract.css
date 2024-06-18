@@ -1,0 +1,5 @@
+@charset "UTF-8";
+/* Import de la font Poppins en Weight 300 depuis Google Fonts et on l'applique sur tous les éléments de la page */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
+/* Import de la font Space Mono depuis Google Fonts et on l'applique sur tous les éléments de la page */
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap");/*# sourceMappingURL=caract.css.map */

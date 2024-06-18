@@ -1,0 +1,151 @@
+@charset "UTF-8";
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+}
+@media (max-width: 801px) {
+  .modal-overlay {
+    height: auto;
+    overflow: hidden;
+  }
+}
+@media (max-width: 359px) {
+  .modal-overlay {
+    height: auto;
+    overflow: hidden;
+  }
+}
+.modal-overlay #wpcf7-f6-o1 {
+  position: fixed;
+  left: 50%;
+  top: 15%;
+  transform: translate(-50%, -50%);
+  height: 150px; /* Définit une hauteur par défaut pour l'élément */
+}
+@media (max-width: 801px) {
+  .modal-overlay #wpcf7-f6-o1 {
+    height: 55px;
+    margin-bottom: 0;
+  }
+}
+.modal-overlay form {
+  background-image: url("./assets/img/contact-header.png");
+  padding: 87px;
+  margin-top: 18px;
+  margin-bottom: 21px;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px !important;
+  width: 597px;
+  height: auto;
+  border: 5px solid #000;
+  align-items: center;
+  background-color: white;
+}
+@media (max-width: 801px) {
+  .modal-overlay form {
+    width: 400px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+@media (max-width: 359px) {
+  .modal-overlay form {
+    width: 350px;
+    height: auto;
+    overflow: hidden;
+  }
+}
+.modal-overlay form label {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 1px;
+  margin-top: 20px;
+}
+.modal-overlay form p {
+  line-height: 0.75;
+  margin: 3px 0 0 0;
+}
+.modal-overlay .wpcf7-text {
+  width: 263px;
+  height: 40px;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+  padding: 0 3px;
+  font-family: "Poppins";
+}
+@media (max-width: 801px) {
+  .modal-overlay .wpcf7-text {
+    width: 190px;
+    height: 40px;
+  }
+}
+@media (max-width: 359px) {
+  .modal-overlay .wpcf7-text {
+    width: 180px;
+    height: 35px;
+  }
+}
+.modal-overlay .wpcf7-textarea {
+  resize: none;
+  width: 263px;
+  height: 210px;
+  border-radius: 8px;
+  border: 1px solid #B8BBC2;
+  padding: 5px 3px;
+  font-family: "Poppins";
+  font-size: 13px;
+}
+@media (max-width: 801px) {
+  .modal-overlay .wpcf7-textarea {
+    width: 190px;
+  }
+}
+@media (max-width: 359px) {
+  .modal-overlay .wpcf7-textarea {
+    width: 180px;
+    height: 100px;
+  }
+}
+.modal-overlay .wpcf7-text:focus, .modal-overlay .wpcf7-textarea:focus {
+  outline: none;
+  border: 2px solid #E00000;
+}
+.modal-overlay .wpcf7-spinner {
+  display: none;
+}
+.modal-overlay .wpcf7-submit {
+  font-family: "Space Mono" !important;
+  background-color: #d8d8d8;
+  border: none;
+  border-radius: 2px;
+  width: 267px;
+  height: 50px;
+  padding: 0;
+  transition: background-color 1000ms, color 1000ms;
+  margin-top: 18px;
+  margin-bottom: 36px;
+}
+.modal-overlay .wpcf7-submit:hover {
+  color: white;
+  background-color: black;
+  transition: background-color 1000ms, color 1000ms;
+}
+@media (max-width: 801px) {
+  .modal-overlay .wpcf7-submit {
+    width: 195px;
+    height: 45px;
+  }
+}
+
+.wpcf7-response-output {
+  display: none;
+}/*# sourceMappingURL=modal.css.map */

@@ -1,0 +1,118 @@
+// HEADER //
+
+.header {
+    padding: 18px 145px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
+
+    &__logo {
+        object-fit: contain;
+
+        @media (max-width: 480px) {
+            width: 138px;
+            height: 9px;
+        }
+    }
+    &__navDesktop {
+        display: flex;
+        flex-direction: row;
+
+        ul {
+            margin: 0;
+        }
+
+        li {
+            display: inline-block;
+            padding-left: 28px;
+            cursor: pointer;
+            &:hover{
+                font-weight: 700;
+            }
+        }
+
+        @media (max-width: 801px) {
+            display: none;
+        }
+    }
+
+    &__navMobile {
+        display: none;
+
+        #openBtn {
+            position: absolute;
+
+            .burger-icon {
+                span {
+                display: block;
+                width: 35px;
+                height: 2px;
+                background-color: black;
+             
+                margin: 0 0 8px 0;
+                }
+            }
+        }
+
+        #menu_burger {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0; /* Start off-screen on the right */
+            width: 100%;
+            height: 100%;
+            background-color: #e00000;
+          
+            z-index: 1000;
+            margin-top: 1px;
+        }
+        
+        #menu_burger.active {
+            display: block !important;
+            animation: fadeInRight 1000ms;
+            transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        .nav_burger .close {
+            font-size: 50px;
+        }
+      
+        .navMobile-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1px 40px 1px 40px;
+            background-color: white;
+        }
+
+        #menu-menu-principal-1 {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 18px;
+            height: 850px;
+            padding: 0;
+            font-size: 44px;
+            color: white;
+
+            @media (max-width: 480px) {
+                height: 400px;
+            }
+        }
+
+        @media (max-width: 801px) {
+            display: block;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        padding: 18px 70px;
+    }
+
+    @media (max-width: 801px) {
+        padding: 26px 75px 26px 40px;
+    }
+
+}

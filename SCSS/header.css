@@ -1,0 +1,107 @@
+.header {
+  padding: 18px 145px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 4px 14px 10px rgba(0, 0, 0, 0.03);
+}
+.header__logo {
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+@media (max-width: 480px) {
+  .header__logo {
+    width: 138px;
+    height: 9px;
+  }
+}
+.header__navDesktop {
+  display: flex;
+  flex-direction: row;
+}
+.header__navDesktop ul {
+  margin: 0;
+}
+.header__navDesktop li {
+  display: inline-block;
+  padding-left: 28px;
+  cursor: pointer;
+}
+.header__navDesktop li:hover {
+  font-weight: 700;
+}
+@media (max-width: 801px) {
+  .header__navDesktop {
+    display: none;
+  }
+}
+.header__navMobile {
+  display: none;
+}
+.header__navMobile #openBtn {
+  position: absolute;
+}
+.header__navMobile #openBtn .burger-icon span {
+  display: block;
+  width: 35px;
+  height: 2px;
+  background-color: black;
+  margin: 0 0 8px 0;
+}
+.header__navMobile #menu_burger {
+  display: none;
+  position: fixed;
+  top: 0;
+  right: 0; /* Start off-screen on the right */
+  width: 100%;
+  height: 100%;
+  background-color: #e00000;
+  z-index: 1000;
+  margin-top: 1px;
+}
+.header__navMobile #menu_burger.active {
+  display: block !important;
+  animation: fadeInRight 1000ms;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+}
+.header__navMobile .nav_burger .close {
+  font-size: 50px;
+}
+.header__navMobile .navMobile-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1px 40px 1px 40px;
+  background-color: white;
+}
+.header__navMobile #menu-menu-principal-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 18px;
+  height: 850px;
+  padding: 0;
+  font-size: 44px;
+  color: white;
+}
+@media (max-width: 480px) {
+  .header__navMobile #menu-menu-principal-1 {
+    height: 400px;
+  }
+}
+@media (max-width: 801px) {
+  .header__navMobile {
+    display: block;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    padding: 18px 70px;
+  }
+}
+@media (max-width: 801px) {
+  .header {
+    padding: 26px 75px 26px 40px;
+  }
+}/*# sourceMappingURL=header.css.map */

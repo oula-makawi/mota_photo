@@ -1,0 +1,25 @@
+/* Ajouter du CSS pour personnaliser Select2 */
+.select2-selection__rendered {
+  font-family: "Poppins";
+}
+@media (max-width: 480px) {
+  .select2-selection__rendered {
+    font-size: 12px;
+  }
+}
+
+.select2-container--default .select2-selection--single {
+  border: 1px solid #ced4da;
+  border-radius: 8px;
+}
+
+/* Ajouter du CSS pour personnaliser Select2 dropdown */
+.select2-container--default .select2-results__option:first-child {
+  background-color: #FFD6D6 !important;
+  color: #000 !important;
+}
+
+.select2-container--default .select2-results__option:not(:first-child)[aria-selected=true] {
+  background-color: #E00000 !important;
+  color: #fff !important;
+}/*# sourceMappingURL=select2.css.map */

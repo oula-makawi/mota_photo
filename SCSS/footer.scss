@@ -1,0 +1,27 @@
+footer {
+    width: 100%;
+    position: static;
+    border-top: solid 1px;
+    margin-top: 40px;
+    
+    #menu-menu-pied-de-page {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 86px;
+        margin: 7px;
+        padding-left: 0;
+
+        @media (max-width: 801px) {
+            flex-direction: column;
+            gap: 30px;
+            align-items: center;
+            margin: 43px 0px 43px 0px;
+        }
+    }
+    
+    .copyright { 
+        
+        margin: 0;
+    }
+}

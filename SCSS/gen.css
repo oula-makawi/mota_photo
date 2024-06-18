@@ -1,0 +1,53 @@
+body {
+  font-family: "space Mono";
+  color: black;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.btn {
+  font-family: font-family_1;
+  font-size: 12px;
+  height: 50px;
+  padding: 8px 15px;
+  border-radius: 2px;
+  background-color: #d8d8d8;
+  transition: background-color 1000ms, color 1000ms;
+  border: none;
+  cursor: pointer;
+  align-self: center;
+}
+.btn:hover {
+  color: white;
+  background-color: black;
+  transition: background-color 1000ms, color 1000ms;
+}
+
+.active {
+  display: flex !important;
+}
+
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.pages-content {
+  margin: 20px 90px;
+}/*# sourceMappingURL=gen.css.map */

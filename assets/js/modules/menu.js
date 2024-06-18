@@ -1,5 +1,4 @@
 // Menu nav burger
-
 function initializeMenu() {
     // Sélection des éléments du DOM
     const menuBurger = document.querySelector("#menu_burger");
@@ -17,3 +16,7 @@ function initializeMenu() {
         menuBurger.classList.remove("active");// Suppression de la classe "active" pour masquer le menu
     }
 }
+
+
+    
+    

@@ -1,0 +1,25 @@
+footer {
+  width: 100%;
+  position: static;
+  border-top: solid 1px;
+  margin-top: 40px;
+}
+footer #menu-menu-pied-de-page {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 86px;
+  margin: 7px;
+  padding-left: 0;
+}
+@media (max-width: 801px) {
+  footer #menu-menu-pied-de-page {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    margin: 43px 0px 43px 0px;
+  }
+}
+footer .copyright {
+  margin: 0;
+}/*# sourceMappingURL=footer.css.map */

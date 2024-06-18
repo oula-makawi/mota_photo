@@ -1,0 +1,116 @@
+.lightbox {
+    display:none;//masquer initialement la lightbox
+	position: fixed;// par rapport à la fenêtre du navigateur
+    justify-content: center;
+    align-items: center;
+	z-index: 1000;//s'affiche au-dessus des autres éléments de la page
+	top: 0;//étendre la lightbox sur toute la fenêtre du navigateur, en utilisant les valeurs "0" pour les positions top, left, bottom et right
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.8)!important;
+	background-size: contain;//ajuster la taille de l'image de fond de la lightbox pour qu'elle s'adapte à la taille de la lightbox elle-même.
+	background-repeat: no-repeat;
+	background-position: center;
+	cursor: pointer;
+
+    &__category, &__ref {
+        color: white;
+        position: absolute;
+        bottom: 10%;
+
+        @media (max-width: 1024px) {
+            bottom: 0%;
+        }
+
+        @media (max-width: 481px) {
+            bottom: 0.5%;
+        }
+    }
+
+    &__category {
+        right: 19%;
+    }
+
+    &__ref {
+        left: 19%;
+        text-transform: uppercase;
+    }    
+
+    &__close {
+        position: absolute;
+        top: 5%;
+        right: 8%;
+        cursor: pointer;
+        color: #fff;
+        transform: rotate(0);
+        transition: transform 500ms;
+
+        &:hover {//rotation et  transitions lors du survol
+            transform: rotate(180deg);
+            transition: transform 500ms;
+        }
+
+        @media (max-width: 801px) {
+            transform: scale(0.8);
+        }
+    }
+
+    &__prev, &__next {
+        font-family: 'Space Mono';
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 18px;
+        letter-spacing: 0em;
+        text-align: left;
+    
+        position: absolute;
+        top: 50%;
+        transform: scale(1.0);
+        transition: transform 500ms, font-weight 500ms;
+    
+        cursor: pointer;
+        color: #fff;
+
+        @media (max-width: 1024px) {
+            display: none;
+        }
+    
+        &:hover {
+            font-size: 15px;
+            font-weight: 900;
+            cursor: pointer;
+            transform: scale(1.2);
+            transition: transform 500ms, font-weight 500ms;
+        }
+    }
+
+    &__prev {
+        left: 5%;
+    }
+
+    &__next {
+        right: 5%;
+    }
+
+    &__photoContainer {
+        flex-shrink: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: 100%;
+        max-height: 100%;
+        margin-bottom: 10px;
+
+        .lightbox-photo {
+            max-height: 1024px;
+            max-width: 68%;
+            object-fit: contain;//ajustement de l'objet pour l'image
+
+            @media (max-width: 801px) {
+                max-height: none;
+                max-width: 100%;
+            }
+        }
+    }
+}
