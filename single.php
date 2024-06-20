@@ -116,11 +116,7 @@ get_header();
 
     </div>
    </div>
-   <div class="btn-container">
-    <a href="<?php echo home_url('/'); ?>"><!--obtenir et imprimer l'URL de la page d'accueil du site WordPress-->
-        <span class="btn home-btn">Toutes les photos</span>
-    </a>
-   </div>
+  
 </div>
 
 </main><!-- #main -->

@@ -302,7 +302,7 @@ footer .copyright {
 .home-content .btn-container .more-btn {
   display: inline-block;
   width: 242px;
-  height: 37px;
+  height: 50px !important;
   text-align: center;
   line-height: 3;
 }
@@ -326,7 +326,7 @@ a, a:visited {
 }
 
 .btn {
-  font-family: font-family_1;
+  font-family: "space Mono";
   font-size: 12px;
   height: 50px;
   padding: 8px 15px;
@@ -338,8 +338,8 @@ a, a:visited {
   align-self: center;
 }
 .btn:hover {
-  color: white;
-  background-color: black;
+  color: black;
+  background-color: #d8d8d8;
   transition: background-color 1000ms, color 1000ms;
 }
 
@@ -749,7 +749,7 @@ a, a:visited {
 }
 .page-content .line hr {
   width: 100%;
-  border: solid 1px color_1;
+  border: solid 1px;
   margin: 17px 0 0 0;
 }
 .page-content .separator {
@@ -765,7 +765,7 @@ a, a:visited {
 }
 .page-content .separator hr {
   width: 100%;
-  border: solid 1px color_1;
+  border: solid 1px;
 }
 .page-content .contact-content {
   display: flex;
@@ -806,7 +806,7 @@ a, a:visited {
 .page-content .contact-content .contact .contact-text {
   font-size: 18px;
   font-weight: 300;
-  font-family: font-family_2;
+  font-family: "Poppins";
   align-self: center;
 }
 @media (max-width: 1140px) {

@@ -100,7 +100,7 @@
 }
 .page-content .line hr {
   width: 100%;
-  border: solid 1px color_1;
+  border: solid 1px;
   margin: 17px 0 0 0;
 }
 .page-content .separator {
@@ -116,7 +116,7 @@
 }
 .page-content .separator hr {
   width: 100%;
-  border: solid 1px color_1;
+  border: solid 1px;
 }
 .page-content .contact-content {
   display: flex;
@@ -157,7 +157,7 @@
 .page-content .contact-content .contact .contact-text {
   font-size: 18px;
   font-weight: 300;
-  font-family: font-family_2;
+  font-family: "Poppins";
   align-self: center;
 }
 @media (max-width: 1140px) {
