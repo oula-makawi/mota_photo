@@ -2,9 +2,9 @@ footer {
   width: 100%;
   position: static;
   border-top: solid 1px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
-footer #menu-menu-pied-de-page {
+footer #menu-menu-du-pied-de-page {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -13,7 +13,7 @@ footer #menu-menu-pied-de-page {
   padding-left: 0;
 }
 @media (max-width: 801px) {
-  footer #menu-menu-pied-de-page {
+  footer #menu-menu-du-pied-de-page {
     flex-direction: column;
     gap: 30px;
     align-items: center;

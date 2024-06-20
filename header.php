@@ -19,6 +19,7 @@
 
 			    </div>        
     <div class="header__navDesktop">
+ <!--   */ Affiche le menu "Menu principal"/* -->
             <?php wp_nav_menu(array('theme_location' => 'main')); ?>
     </div>
  

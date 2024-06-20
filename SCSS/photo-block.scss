@@ -1,0 +1,89 @@
+.photo-suggested {
+    position: relative;
+
+    &:hover .overlay {
+        opacity: 1;
+        transition: opacity 500ms ease-in-out;
+    }
+    
+    .photo { /* l'image occupe toute la largeur disponible  */
+        width: 100%;
+        height: 45vh;
+        object-fit: cover;/* et couvre toute la zone disponible */
+
+        @media (max-width: 1024px) {
+            height: 60vh;
+        }
+
+        @media (max-width: 481px) {
+            height: 40vh;
+        }
+
+    }
+    .overlay {/*Positionne l'overlay sur l'image, le rend transparent par défaut, et lui applique une transition pour l'opacité*/
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 999;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.60);
+        opacity: 0;
+        transition: opacity 500ms ease-in-out;
+
+        &__full {/*l'élément enfant de .overlay occupe tout l'espace disponible de l'overlay*/
+            position: relative;
+            width: 100%;
+            height: 100%;
+
+            .open-photopage {/*Positionne un lien au centre de l'overlay et applique une animation de mise à l'échelle au survol*/
+                position: absolute;
+                top: 48%;
+                left: 45%;
+                transform: scale(1.0);
+                transition: transform 500ms;
+                
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2);
+                    transition: transform 500ms;
+                }
+            }
+
+            .fullsize {/* Positionne une icône de plein écran dans le coin supérieur droit de l'overlay, et applique une animation de mise à l'échelle et de rotation au survol*/
+                width: 35px;
+                height: 35px; 
+                position: absolute;
+                right: 2%;
+                top: 2%;
+                transform: scale(1.0) rotate(0);
+                transition: transform 500ms;
+                
+                &:hover {
+                    cursor: pointer;
+                    transform: scale(1.2) rotate(180deg);
+                    transition: transform 500ms;
+                }
+            }
+
+            .overlay-text {/*Définit la couleur, la police, la taille et la transformation du texte pour les éléments textuels de l'overlay*/
+                color: white;
+                font-family: 'Poppins';
+                font-size: 14px; 
+                text-transform: uppercase;
+            }
+
+            .overlay-title {/*Positionne le titre en bas à gauche de l'overlay*/
+                position: absolute;
+                bottom: 1%;
+                left: 3%;
+            }
+
+            .overlay-category {/*Positionne la catégorie en bas à droite de l'overlay*/
+                position: absolute;
+                bottom: 1%;
+                right: 3%;
+            }
+        }
+    }
+}

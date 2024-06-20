@@ -1,4 +1,13 @@
 @charset "UTF-8";
+/*
+Theme Name: mota photo 
+Theme URI: http://example.com/twenty-twenty-one-child/
+Description: Twenty Twenty-One Child Theme
+Author: Your Name
+Author URI: http://example.com
+Template: twentytwenty
+Version: 1.0.0
+*/
 /* Import de la font Poppins en Weight 300 depuis Google Fonts et on l'applique sur tous les éléments de la page */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300&display=swap");
 /* Import de la font Space Mono depuis Google Fonts et on l'applique sur tous les éléments de la page */
@@ -115,9 +124,9 @@ footer {
   width: 100%;
   position: static;
   border-top: solid 1px;
-  margin-top: 40px;
+  margin-top: 50px;
 }
-footer #menu-menu-pied-de-page {
+footer #menu-menu-du-pied-de-page {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -126,7 +135,7 @@ footer #menu-menu-pied-de-page {
   padding-left: 0;
 }
 @media (max-width: 801px) {
-  footer #menu-menu-pied-de-page {
+  footer #menu-menu-du-pied-de-page {
     flex-direction: column;
     gap: 30px;
     align-items: center;
@@ -911,4 +920,86 @@ a, a:visited {
   .page-content .btn-container {
     display: none;
   }
+}
+
+.photo-suggested {
+  position: relative;
+}
+.photo-suggested:hover .overlay {
+  opacity: 1;
+  transition: opacity 500ms ease-in-out;
+}
+.photo-suggested .photo { /* l'image occupe toute la largeur disponible  */
+  width: 100%;
+  height: 45vh;
+  -o-object-fit: cover;
+     object-fit: cover; /* et couvre toute la zone disponible */
+}
+@media (max-width: 1024px) {
+  .photo-suggested .photo {
+    height: 60vh;
+  }
+}
+@media (max-width: 481px) {
+  .photo-suggested .photo {
+    height: 40vh;
+  }
+}
+.photo-suggested .overlay { /*Positionne l'overlay sur l'image, le rend transparent par défaut, et lui applique une transition pour l'opacité*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+.photo-suggested .overlay__full { /*l'élément enfant de .overlay occupe tout l'espace disponible de l'overlay*/
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.photo-suggested .overlay__full .open-photopage { /*Positionne un lien au centre de l'overlay et applique une animation de mise à l'échelle au survol*/
+  position: absolute;
+  top: 48%;
+  left: 45%;
+  transform: scale(1);
+  transition: transform 500ms;
+}
+.photo-suggested .overlay__full .open-photopage:hover {
+  cursor: pointer;
+  transform: scale(1.2);
+  transition: transform 500ms;
+}
+.photo-suggested .overlay__full .fullsize { /* Positionne une icône de plein écran dans le coin supérieur droit de l'overlay, et applique une animation de mise à l'échelle et de rotation au survol*/
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: 2%;
+  top: 2%;
+  transform: scale(1) rotate(0);
+  transition: transform 500ms;
+}
+.photo-suggested .overlay__full .fullsize:hover {
+  cursor: pointer;
+  transform: scale(1.2) rotate(180deg);
+  transition: transform 500ms;
+}
+.photo-suggested .overlay__full .overlay-text { /*Définit la couleur, la police, la taille et la transformation du texte pour les éléments textuels de l'overlay*/
+  color: white;
+  font-family: "Poppins";
+  font-size: 14px;
+  text-transform: uppercase;
+}
+.photo-suggested .overlay__full .overlay-title { /*Positionne le titre en bas à gauche de l'overlay*/
+  position: absolute;
+  bottom: 1%;
+  left: 3%;
+}
+.photo-suggested .overlay__full .overlay-category { /*Positionne la catégorie en bas à droite de l'overlay*/
+  position: absolute;
+  bottom: 1%;
+  right: 3%;
 }/*# sourceMappingURL=style.css.map */

@@ -1,4 +1,9 @@
 <?php
+
+
+include_once (get_stylesheet_directory() . '/assets/template-parts/loadMore.php');
+
+
 // Fonction pour charger les styles et scripts du thème parent et du thème enfant
 function twentytwenty_child_enqueue_styles() {
     // Styles du thème parent
@@ -34,45 +39,16 @@ function twentytwenty_child_enqueue_styles() {
           // Localiser les données de script avec wp_localize_script, ce qui permet de passer des variables PHP à mon JavaScript.
     wp_localize_script('modal-script', 'theme_vars', array(  'templateUrl' => get_template_directory_uri()));
     // Localiser le script avec nonce pour la sécurité AJAX
-    wp_localize_script('filters', 'myAjax', array(
-        'ajaxurl' => admin_url('admin-ajax.php'),
-        'nonce'   => wp_create_nonce('my-ajax-nonce')
-    ));
-
+    wp_localize_script('filters', 'myAjax', array( 'ajaxurl' => admin_url('admin-ajax.php'), 'nonce'   => wp_create_nonce('my-ajax-nonce')   ));
+    wp_localize_script('load-more', 'ajax_object',
+        array('ajax_url' => admin_url('admin-ajax.php'))
+    );
 
 }
 add_action('wp_enqueue_scripts', 'twentytwenty_child_enqueue_styles');
 
-// Enregistrer les emplacements de menus
-function mota_supports() {
-    add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'menus' );
-    register_nav_menu( 'main', 'Menu principal' );
-    register_nav_menu( 'footer', 'Menu pied de page' );
-}
 
-add_action( 'after_setup_theme', 'mota_supports' );
-
-
-/*function ajouter_lien_contact_menu($items, $args) //cela ajoute aute contact avec lien
-{
-    // Vérifiez si c'est le menu principal
-    if ($args->theme_location == 'main') {
-        // Ajoutez le lien "Contact" à la fin du menu
-        $items .= '<li><a href="#" id="lien-contact">CONTACT</a></li>';
-    }
-    return $items;
-}
-add_filter('wp_nav_menu_items', 'ajouter_lien_contact_menu', 10, 2);*/
-/*function twentytwenty_child_register_menus() {
-    register_nav_menus(array(
-        'main' => __('Main Menu', 'twentytwenty-child'),
-    ));
-}
-add_action('after_setup_theme', 'twentytwenty_child_register_menus');*/
-
-/*function add_elements_menus($items, $args) {
+function add_elements_menus($items, $args) {
     if ($args->theme_location == 'main') { 
         $items .= '<li class="menu-item contact-btn">CONTACT</li>'; // Ajoutez le nouvel élément "CONTACT"
     }
@@ -83,42 +59,20 @@ add_action('after_setup_theme', 'twentytwenty_child_register_menus');*/
 }
 add_filter('wp_nav_menu_items', 'add_elements_menus', 10, 2);
 
-*/
 
-/*
+function my_filter_function() {
+    check_ajax_referer('my-ajax-nonce', 'nonce');
 
-function my_theme_enqueue_styles() {
-   
+    // Votre logique de filtrage ici
+    $response_data = 'Contenu filtré'; // Exemple de contenu filtré
+
+    wp_send_json_success($response_data);
 }
-add_action('wp_enqueue_scripts', 'my_theme_enqueue_styles');
-*/
+add_action('wp_ajax_ajaxFilter', 'my_filter_function');
+add_action('wp_ajax_nopriv_ajaxFilter', 'my_filter_function');
 
-// Ajouter la prise en charge des images mises en avant
-//add_theme_support( 'post-thumbnails' );
-/*set_post_thumbnail_size( 600, 0, false );
-add_image_size( 'hero', 1450, 960, true );
-add_image_size( 'desktop-home', 600, 520, true );
-add_image_size( 'lightbox', 1300, 900, true );
-*/
-// Ajouter automatiquement le titre du site dans l'en-tête du site
-//add_theme_support( 'title-tag' );
+//enregistrer l'action pour les utilisateurs connectés
+add_action('wp_ajax_loadMore', 'loadMore');
+//et pour les utilisateurs non connectés 
+add_action('wp_ajax_nopriv_loadMore', 'loadMore');
 
-// créer un lien pour la gestion des menus dans l'administration
-// et activation d'un menu pour le header et d'un menu pour le footer
-// Visibles ensuite dans Apparence / Menus (after_setup_theme)
-/*function register_my_menu(){
-    register_nav_menu('main', "Menu principal");
-    register_nav_menu('footer', "Menu pied de page");
-
-}
-
- add_action('after_setup_theme', 'register_my_menu');*/
-/*function nathalie_mota_supports() {
-    add_theme_support( 'title-tag' );
-    add_theme_support( 'post-thumbnails' );
-    add_theme_support( 'menus' );
-    register_nav_menu( 'main', 'Menu principal' );
-    register_nav_menu( 'footer', 'Menu pied de page' );
-}
-
-add_action( 'after_setup_theme', 'nathalie_mota_supports' );*/

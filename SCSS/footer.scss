@@ -2,10 +2,12 @@ footer {
     width: 100%;
     position: static;
     border-top: solid 1px;
-    margin-top: 40px;
+    margin-top: 50px;
     
-    #menu-menu-pied-de-page {
-        display: flex;
+ 
+   #menu-menu-du-pied-de-page {
+
+    display: flex;
         flex-direction: row;
         justify-content: center;
         gap: 86px;
@@ -17,10 +19,10 @@ footer {
             gap: 30px;
             align-items: center;
             margin: 43px 0px 43px 0px;
-        }
-    }
-    
-    .copyright { 
+   }
+}   
+ 
+.copyright { 
         
         margin: 0;
     }
