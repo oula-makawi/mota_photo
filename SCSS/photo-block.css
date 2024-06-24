@@ -8,7 +8,7 @@
 }
 .photo-suggested .photo { /* l'image occupe toute la largeur disponible  */
   width: 100%;
-  height: 45vh;
+  height: 60vh;
   -o-object-fit: cover;
      object-fit: cover; /* et couvre toute la zone disponible */
 }
@@ -19,7 +19,7 @@
 }
 @media (max-width: 481px) {
   .photo-suggested .photo {
-    height: 40vh;
+    height: 26vh;
   }
 }
 .photo-suggested .overlay { /*Positionne l'overlay sur l'image, le rend transparent par défaut, et lui applique une transition pour l'opacité*/

@@ -227,6 +227,7 @@
 }
 .page-content .gallery {
   margin-top: 77px;
+  display: block;
 }
 .page-content .gallery .you-may-also-like {
   font-size: 18px;
