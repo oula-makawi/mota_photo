@@ -219,6 +219,7 @@
   display: block;
   top: -80px;
   left: 0px;
+  width: 81px;
 }
 .page-content .contact-content .preview .arrows .arrow-link.arrow-right:hover .hover-thumbnail.thumbnail-right {
   display: block;

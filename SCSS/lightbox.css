@@ -96,8 +96,8 @@
   margin-bottom: 10px;
 }
 .lightbox__photoContainer .lightbox-photo {
-  max-height: 1024px;
-  max-width: 68%;
+  max-height: 80%;
+  max-width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
 }

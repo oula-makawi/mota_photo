@@ -103,8 +103,9 @@
         margin-bottom: 10px;
 
         .lightbox-photo {
-            max-height: 1024px;
-            max-width: 68%;
+    
+            max-height: 80%;
+            max-width: 80%;
             object-fit: contain;//ajustement de l'objet pour l'image
 
             @media (max-width: 801px) {

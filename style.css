@@ -611,8 +611,8 @@ a, a:visited {
   margin-bottom: 10px;
 }
 .lightbox__photoContainer .lightbox-photo {
-  max-height: 1024px;
-  max-width: 68%;
+  max-height: 80%;
+  max-width: 80%;
   -o-object-fit: contain;
      object-fit: contain;
 }
@@ -869,6 +869,7 @@ a, a:visited {
   display: block;
   top: -80px;
   left: 0px;
+  width: 81px;
 }
 .page-content .contact-content .preview .arrows .arrow-link.arrow-right:hover .hover-thumbnail.thumbnail-right {
   display: block;

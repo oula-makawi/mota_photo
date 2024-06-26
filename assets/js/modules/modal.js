@@ -33,10 +33,11 @@ function initializeModal() {
         const refValueElement = document.querySelector(".ref-value");
 
         // Si l'élément de valeur de référence est trouvé, remplir le champ du formulaire
+        
         if (refValueElement) {
             const refValue = refValueElement.textContent; // Obtenir le contenu textuel de l'élément de valeur de référence
-            const inputField = formRefDiv.querySelector("input[name='your-subject']"); // Trouver le champ de saisie dans le formulaire
-
+            const inputField = document.querySelector("input[name='your-subject']"); // Trouver le champ de saisie dans le formulaire
+            console.log(inputField );
             // Si le champ de saisie est trouvé, définir sa valeur sur la valeur de référence en majuscules
             if (inputField) {
                 inputField.value = refValue.toUpperCase();
@@ -64,6 +65,7 @@ function initializeModal() {
         }
     }
 }
+
 
 // Initialiser le comportement de la modale lorsque le contenu du DOM est complètement chargé
 document.addEventListener('DOMContentLoaded', initializeModal);

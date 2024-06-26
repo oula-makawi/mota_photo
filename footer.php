@@ -1,11 +1,13 @@
 
 <footer>
-    <div class="modal-overlay">    
+<div class="modal-overlay">
   
-    <?php get_template_part('assets/template-parts/contact-form'); ?>
+
+<?php get_template_part('assets/template-parts/contact-form'); ?>
+</div>
 
 
-</div> 
+
         <?php get_template_part('assets/template-parts/lightbox'); ?>
         <?php wp_nav_menu(array('theme_location' => 'footer')); ?>   
         
